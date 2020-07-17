@@ -1,5 +1,12 @@
 import React from 'react';
 
+export default () => (
+	<div>
+		<p>This is dynemic component</p>
+		<p>Числа = <strong>{Math.round(Math.random() * 100)}</strong></p>
+	</div>
+)
+
 // function car() {
 //     return (
 //         <h2>This is car component</h2>
@@ -26,9 +33,10 @@ import React from 'react';
 
 
 // __ МОЖНО ОБЪЕДИНИТЬ С ЭКСПОРТОМ __
-export default () => (
-    <div>
-        This is car component
-        <strong>test</strong>
-    </div>
-)
+// === ПЕРЕНОШУ ВВЕРХ ===
+// export default () => (
+//     <div>
+//         This is car component
+//         <strong>test</strong>
+//     </div>
+// )
