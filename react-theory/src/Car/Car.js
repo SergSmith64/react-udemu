@@ -1,11 +1,18 @@
 import React from 'react';
 
-export default () => (
+export default (props) => (
 	<div>
-		<p>This is dynemic component</p>
-		<p>Числа = <strong>{Math.round(Math.random() * 100)}</strong></p>
+		<h3>Car name: {props.name}</h3>
+		<p>Год выпуска: <strong>{props.year}</strong></p>
 	</div>
 )
+
+// export default () => (
+// 	<div>
+// 		<p>This is dynemic component</p>
+// 		<p>Числа = <strong>{Math.round(Math.random() * 100)}</strong></p>
+// 	</div>
+// )
 
 // function car() {
 //     return (
