@@ -4,6 +4,7 @@ export default (props) => (
 	<div>
 		<h3>Car name: {props.name}</h3>
 		<p>Год выпуска: <strong>{props.year}</strong></p>
+		{props.children}
 	</div>
 )
 
