@@ -11,3 +11,6 @@
 <p style={{ color: 'red', fontWeight: 'bold' }}>COLOR</p>
 ~~~
 13. Создание State
+~~~javascript
+<Car name={cars[0].name} year={cars[0].year} />
+~~~
