@@ -23,3 +23,9 @@ this.setState({
     pageTitle: newTitle
 })
 ~~~
+
+16. Передача параметров в функцию
+(Passing parameters to a function)
+~~~javascript
+onChangeTitle={this.changeTitleHandler.bind(this, cars[0].name)}
+~~~

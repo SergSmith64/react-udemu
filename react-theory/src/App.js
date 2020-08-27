@@ -17,11 +17,7 @@ class App extends Component {
 		pageTitle: 'React Components'
 	}
 	// создаю функцию, которая будет выполняться по нажатию кнопки
-	changeTitleHandler = () => {
-		console.log('Clicked...!');
-
-		const oldTitle = this.state.pageTitle;
-		const newTitle = oldTitle + ' (changed)';
+	changeTitleHandler = (newTitle) => {
 
 		// если надо изменить состояние на данной странице -
 		// надо вызвать setState
@@ -31,7 +27,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log('Render')
 		const divStyle = {
 			textAlign: 'center'
 		}
@@ -40,10 +35,24 @@ class App extends Component {
 		return (
 			<div style={divStyle}>
 				<h1>{this.state.pageTitle}</h1>
-				<button onClick={this.changeTitleHandler}>Change title</button>
-				<Car name={cars[0].name} year={cars[0].year} />
-				<Car name={cars[1].name} year={cars[1].year} />
-				<Car name={cars[2].name} year={cars[2].year} />
+				<button onClick={this.changeTitleHandler.bind(this, 'Chan')}>Change title</button>
+				<Car 
+					name={cars[0].name} 
+					year={cars[0].year} 
+					// первый способ
+					onChangeTitle={this.changeTitleHandler.bind(this, cars[0].name)}
+				/>
+				<Car 
+					name={cars[1].name} 
+					year={cars[1].year} 
+					// второй способ
+					onChangeTitle={() => this.changeTitleHandler(cars[1].name)}
+				/>
+				<Car 
+					name={cars[2].name} 
+					year={cars[2].year} 
+					onChangeTitle={() => this.changeTitleHandler(cars[2].name)}
+				/>
 			</div>
 		);
 	}

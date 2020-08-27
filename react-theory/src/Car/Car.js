@@ -4,6 +4,7 @@ export default (props) => (
 	<div>
 		<h3>Car name: {props.name}</h3>
 		<p>Год выпуска: <strong>{props.year}</strong></p>
+		<button onClick={props.onChangeTitle}>Click</button>
 	</div>
 )
 
