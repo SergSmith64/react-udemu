@@ -12,5 +12,7 @@
 ~~~
 13. Создание State
 ~~~javascript
+<h1>{this.state.pageTitle}</h1>
 <Car name={cars[0].name} year={cars[0].year} />
 ~~~
+14. Добавление события onClick
