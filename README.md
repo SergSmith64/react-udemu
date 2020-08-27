@@ -16,3 +16,10 @@
 <Car name={cars[0].name} year={cars[0].year} />
 ~~~
 14. Добавление события onClick
+
+15. Изменение State с помощью:
+~~~javascript
+this.setState({
+    pageTitle: newTitle
+})
+~~~

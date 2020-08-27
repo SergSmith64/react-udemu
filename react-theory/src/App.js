@@ -19,13 +19,23 @@ class App extends Component {
 	// создаю функцию, которая будет выполняться по нажатию кнопки
 	changeTitleHandler = () => {
 		console.log('Clicked...!');
+
+		const oldTitle = this.state.pageTitle;
+		const newTitle = oldTitle + ' (changed)';
+
+		// если надо изменить состояние на данной странице -
+		// надо вызвать setState
+		this.setState({
+			pageTitle: newTitle
+		})
 	}
 
 	render() {
+		console.log('Render')
 		const divStyle = {
 			textAlign: 'center'
 		}
-		const cars = this.state.cars
+		const cars = this.state.cars;
 
 		return (
 			<div style={divStyle}>
