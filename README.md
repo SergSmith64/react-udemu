@@ -29,3 +29,6 @@ this.setState({
 ~~~javascript
 onChangeTitle={this.changeTitleHandler.bind(this, cars[0].name)}
 ~~~
+
+17. Обработка Input - прослушка инпута и передача event.target.value с помощью setState в компонент pageTitle.
+(Listening for input and passing event.target.value using setState to the pageTitle component).
